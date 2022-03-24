@@ -2,7 +2,7 @@
 
 ---
 
-## Displaying the list of hots
+## Displaying the list of hosts
 *command:*
 <code> curl -s http://public-dns.info/nameserver/br.csv </code>
 - curl: Used for transferring the data from or to server.
