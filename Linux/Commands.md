@@ -32,8 +32,33 @@
 - -c 1: Stop after sending 1 packet.
 - -w 1: Stop after 1 second.
 
-## Finding the time
+## Finding the response time
 <code> grep "time=" </code>
 - grep: Global regular expression print is used for searching the content.
 
-## 
+## Filtering the time and IP from previous Output
+<code> awk '{print substr($7, 6, length($7)) " " substr($4, 1, length($4) -1)}' </code>
+- awk(Aho, Weinberger, and Kernighan): Used to manipulate data. allows users to use variables and string functions and logical operators.
+- {print substr($7, 6, length($7)) " " substr($4, 1, length($4) -1)} : print the substring of 7th column start=6 and end=total length and similarly the substring of 4th column is printed.
+
+## Sort the output numerically
+<code> sort -n </code>
+- sort: Used to sort a file or arrange in some order.
+- -n: Sort the file in numerical order.
+
+## Print in the form {IP timems}
+<code> awk '{print $2 " " $1 "ms"}' </code>
+- awk: Allows users to use variables, string functions, and logical operators without compiling.
+- {print $2 " " $1 "ms"}: print second column then first column, the delimiter is by default whitespace.
+
+## Display the starting 10 lines
+<code> head -n 10 </code>
+- head: displays the starting 10 lines by default.
+- -n 10: display the starting n lines. Here n is 10.
+
+## Final Output
+<code> curl -s http://public-dns.info/nameserver/br.csv | cut -d, -f1 | shuf | tail -n 50 | xargs -i timeout 1 ping -c1 -w 1 {} | grep "time=" | awk '{print substr($7, 6, length($7)) " " substr($4, 1, length($4) -1)}' | sort -n | awk '{print $2 " " $1 "ms"}' | head -n 10 </code>
+<br>
+**Output:**<br>
+Displays 10 Hosts and the reponse time of each Host. The Host IP's are provided by the given URL.
+<br>
