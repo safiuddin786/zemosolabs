@@ -15,11 +15,11 @@
 **Send message via Terminal**<br>
 *client:*
 ![Server](https://github.com/safiuddin786/zemosolabs/blob/master/Screenshots/Networking/client.png?raw=true)<br></br>
-*server:*
+*server:*<br>
 ![Server](https://github.com/safiuddin786/zemosolabs/blob/master/Screenshots/Networking/server.png?raw=true)<br></br>
 
 **Ending the Connection Using Ctrl+d or Ctrl+c**<br>
 *client:*
 ![Server](https://github.com/safiuddin786/zemosolabs/blob/master/Screenshots/Networking/clientclose.png?raw=true)<br></br>
-*server:*
+*server:*<br>
 ![Server](https://github.com/safiuddin786/zemosolabs/blob/master/Screenshots/Networking/serverclose.png?raw=true)<br></br>
