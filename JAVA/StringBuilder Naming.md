@@ -13,7 +13,7 @@ StringBuilder in Java is used to create mutable Strings. StringBuilder is non-sy
 <br></br>
 ## Methods in StringBuilder and Naming Conventions
 | Method Name | Description and Naming Convention |
-|:---|---:|
+|---|---|
 | append(String s) | Used to append with Existing String with this String. Overloaded with other types. Follows camelCase Naming Convention.
 | insert(int offset, String s) | insert is used to insert String at the particular position of the existing String. So, the offset is required for inserting the String. |
 | replace(int startIndex, int endIndex, String str) | As the name suggests it is used to replace the String from a particular Start index to End index with this String which are given as parameters. |
